@@ -1,10 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
-    a = str(100)
-    return a
+    return render_template("index.html")
+
+
+@app.route('/hi')
+def index1():
+    return "adaas"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
